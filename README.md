@@ -1,4 +1,4 @@
-# r-oe14-chatroom
+# r-oe13-chatroom
 Rails application: Realtime chat
 
 # Members
