@@ -3,6 +3,7 @@ Rails application: Realtime chat
 
 # Members
 Hoàng Anh Quân
+
 Trương Văn phong
 
 # Requirement + DB design
