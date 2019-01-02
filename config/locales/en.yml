@@ -1,2 +1,7 @@
 en:
-  hello: "Hello world"
+  sessions:
+    new:
+      login: "Login"
+      email: "Email"
+      password: "Password"
+      remem_pass: "Remmember Password"

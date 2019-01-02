@@ -1,0 +1,7 @@
+vi:
+  sessions:
+    new:
+      login: "Đăng nhập"
+      email: "Email"
+      password: "Mật khẩu"
+      remem_pass: "Ghi nhớ đăng nhập"

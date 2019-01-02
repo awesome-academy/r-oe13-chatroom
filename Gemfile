@@ -6,6 +6,9 @@ ruby "2.5.3"
 gem "rails", "~> 5.2.2"
 gem "mysql2", ">= 0.4.4", "< 0.6.0"
 gem "turbolinks", "~> 5"
+gem "bootstrap-sass", "3.3.7"
+gem "jquery-rails"
+gem "rails-i18n"
 gem "jbuilder", "~> 2.5"
 gem "bootsnap", ">= 1.1.0", require: false
 
