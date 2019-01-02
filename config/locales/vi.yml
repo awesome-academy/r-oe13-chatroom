@@ -5,3 +5,11 @@ vi:
       email: "Email"
       password: "Mật khẩu"
       remem_pass: "Ghi nhớ đăng nhập"
+  users:
+    new:
+      signup: "Đăng kí"
+      name: "Tên"
+      email: "Email"
+      phone_num: "Số điện thoại"
+      password: "Mật khẩu"
+      re_password: "Nhập lại mật khẩu"

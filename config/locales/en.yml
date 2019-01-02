@@ -5,3 +5,11 @@ en:
       email: "Email"
       password: "Password"
       remem_pass: "Remmember Password"
+  users:
+    new:
+      signup: "Signup"
+      name: "Name"
+      email: "Email"
+      phone_num: "Phone Number"
+      password: "Password"
+      re_password: "Password Confirmation"
