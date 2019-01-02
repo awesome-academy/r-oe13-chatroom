@@ -1,6 +1,10 @@
 vi:
+  not_found: "Không tìm thấy user"
+  update_succ: "Cập nhật thành công"
+
   sessions:
     new:
+      signup: "Đăng kí ngay"
       login: "Đăng nhập"
       email: "Email"
       password: "Mật khẩu"
@@ -13,6 +17,27 @@ vi:
       phone_num: "Số điện thoại"
       password: "Mật khẩu"
       re_password: "Nhập lại mật khẩu"
+    form:
+      signup: "Đăng kí"
+      name: "Tên"
+      email: "Email"
+      phone_num: "Số điện thoại"
+      password: "Mật khẩu"
+      re_password: "Nhập lại mật khẩu"
+
+    edit:
+      edit_text: "Chỉnh sửa thông tin"
+      name: "Tên"
+      email: "Email"
+      phone_num: "Số điện thoại"
+      password: "Mật khẩu"
+      re_password: "Nhập lại mật khẩu"
+      save_text: "Lưu thay đổi"
+  shared:
+    error_messages:
+      err_messages: "Biểu mẫu có chứa"
+      error: "Lỗi"
+
   layouts:
     header:
       slogan: "FChat - Connected"
