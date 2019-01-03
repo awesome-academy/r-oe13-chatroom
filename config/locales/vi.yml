@@ -1,14 +1,10 @@
 vi:
   not_found: "Không tìm thấy user"
   update_succ: "Cập nhật thành công"
-
-  sessions:
-    new:
-      signup: "Đăng kí ngay"
-      login: "Đăng nhập"
-      email: "Email"
-      password: "Mật khẩu"
-      remem_pass: "Ghi nhớ đăng nhập"
+  signup_succ: "Đăng kí thành công"
+  shared:
+    error_messages:
+      mes: "Biểu mẫu có chứa "
   users:
     new:
       signup: "Đăng kí"
@@ -24,7 +20,6 @@ vi:
       phone_num: "Số điện thoại"
       password: "Mật khẩu"
       re_password: "Nhập lại mật khẩu"
-
     edit:
       edit_text: "Chỉnh sửa thông tin"
       name: "Tên"
@@ -37,9 +32,12 @@ vi:
     error_messages:
       err_messages: "Biểu mẫu có chứa"
       error: "Lỗi"
-
   layouts:
     header:
+      account: "Tài khoản"
+      profile: "Thông tin"
+      settings: "Cài đặt"
+      logout: "Đăng xuất"
       slogan: "FChat - Connected"
       home: "Trang chủ"
       about: "Về chúng tôi"
@@ -61,3 +59,23 @@ vi:
       assist: "Chúng tôi ở đây để hỗ trợ bạn."
     service:
       incoming: "Nội dung đang được xây dựng..."
+  sessions:
+    new:
+      login: "Đăng nhập"
+      email: "Email"
+      password: "Mật khẩu"
+      remem_pass: "Ghi nhớ đăng nhập"
+  shared:
+    error_messages:
+      err_messages: "Biểu mẫu có chứa"
+      error: "Lỗi"
+  chatrooms:
+    new:
+      create_chatroom: "Tạo Phòng Chat"
+      create: "Tạo ngay"
+      name: "Tên phòng chat"
+  controller:
+    sessions:
+      danger: "Email hoặc mật khẩu không hợp lệ"
+    chatrooms:
+      create_chatroom_succ: "Tạo thành công"

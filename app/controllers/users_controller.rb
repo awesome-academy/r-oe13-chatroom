@@ -1,9 +1,6 @@
 class UsersController < ApplicationController
   before_action :load_user, only: %i(show edit update)
-
-  def edit; end
-
-  def show; end
+  before_action :logged_in_user, only: %i(show edit update destroy)
 
   def index
     @users=User.all
@@ -12,6 +9,20 @@ class UsersController < ApplicationController
   def new
     @user = User.new
   end
+
+  def create
+    @user = User.new user_params
+    if @user.save
+      flash[:success] = t "signup_succ"
+      redirect_to login_path
+    else
+    render :new
+    end
+  end
+
+  def show; end
+
+  def edit; end
 
   def update
     if @user.update_attributes user_params
