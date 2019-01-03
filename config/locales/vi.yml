@@ -6,6 +6,13 @@ vi:
   chatroom_list: "Danh sách Phòng Chat"
   not_owner_chatroom: "Bạn không phải là chủ phòng Chat này"
   chatrooms:
+    chatroom:
+      show: "Xem"
+      edit: "Sửa"
+      destroy: "Xóa"
+      join: "Vào phòng"
+      leave: "Rời phòng"
+      confirm_delete: "Bạn chắc chắn chưa"
     new:
       create_chatroom: "Tạo Phòng Chat"
       create: "Tạo ngay"
@@ -14,7 +21,6 @@ vi:
       new_chatroom: "Tạo phòng mới"
       chatroom: "Phòng Chat"
       name: "Tên phòng"
-      confirm_delete: "Bạn chắc chắn chưa"
       show: "Xem"
       edit: "Sửa"
       destroy: "Xóa"

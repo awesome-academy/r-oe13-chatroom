@@ -1,0 +1,10 @@
+<tr>
+  <td><%= chatroom.name %><td>
+  <td><%= link_to t(".show"),chatroom %><td>
+  <% if owner_chatroom(chatroom) %>
+    <td><%= link_to t(".edit"), edit_chatroom_path(chatroom) %><td>
+    <td><%= link_to t(".destroy"),chatroom_path(chatroom), method: :delete, data: { confirm: t(".confirm_delete") } %><td>
+  <% end %>
+  <td><%= link_to t(".join"), chatroom_chatroom_users_path(chatroom), method: :post %><td>
+  <td><%= link_to t(".leave"), chatroom_chatroom_users_path(chatroom), method: :delete, remote: :true %><td>
+</tr>
