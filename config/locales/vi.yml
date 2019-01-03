@@ -1,10 +1,69 @@
 vi:
   not_found: "Không tìm thấy user"
+  not_found_chatroom: "Không tìm thấy Phòng chát"
   update_succ: "Cập nhật thành công"
   signup_succ: "Đăng kí thành công"
+  chatroom_list: "Danh sách Phòng Chat"
+  not_owner_chatroom: "Bạn không phải là chủ phòng Chat này"
+  chatrooms:
+    new:
+      create_chatroom: "Tạo Phòng Chat"
+      create: "Tạo ngay"
+      name: "Tên phòng chat"
+    index:
+      new_chatroom: "Tạo phòng mới"
+      chatroom: "Phòng Chat"
+      name: "Tên phòng"
+      confirm_delete: "Bạn chắc chắn chưa"
+      show: "Xem"
+      edit: "Sửa"
+      destroy: "Xóa"
+      join: "Vào phòng"
+      leave: "Rời phòng"
+    show:
+      name: "Tên phòng"
+      member: "Thành viên"
+      edit: "Sửa"
+      back: "Trở lại"
+  layouts:
+    header:
+      account: "Tài khoản"
+      profile: "Thông tin"
+      settings: "Cài đặt"
+      logout: "Đăng xuất"
+      slogan: "FChat - Connected"
+      home: "Trang chủ"
+      about: "Về chúng tôi"
+      services: "Dịch vụ"
+      contact: "Liên hệ"
+      en: "Tiếng Anh"
+      vi: "Tiếng Việt"
+      signin: "Đăng nhập"
+    footer:
+      copyright: "© Một sản phẩm của Q&P"
+  sessions:
+    new:
+      signup: "Đăng kí ngay"
+      login: "Đăng nhập"
+      email: "Email"
+      password: "Mật khẩu"
+      remem_pass: "Ghi nhớ đăng nhập"
   shared:
     error_messages:
-      mes: "Biểu mẫu có chứa "
+      err_messages: "Biểu mẫu có chứa"
+      error: "Lỗi"
+  static_pages:
+    home:
+      join: "THAM GIA CHAT"
+      signup: "Đăng Ký Ngay"
+      chatnow: "Chat ngay"
+    about:
+      about: "Về chúng tôi"
+    contact:
+      contact: "Liên hệ"
+      assist: "Chúng tôi ở đây để hỗ trợ bạn."
+    service:
+      incoming: "Nội dung đang được xây dựng..."
   users:
     new:
       signup: "Đăng kí"
@@ -28,54 +87,10 @@ vi:
       password: "Mật khẩu"
       re_password: "Nhập lại mật khẩu"
       save_text: "Lưu thay đổi"
-  shared:
-    error_messages:
-      err_messages: "Biểu mẫu có chứa"
-      error: "Lỗi"
-  layouts:
-    header:
-      account: "Tài khoản"
-      profile: "Thông tin"
-      settings: "Cài đặt"
-      logout: "Đăng xuất"
-      slogan: "FChat - Connected"
-      home: "Trang chủ"
-      about: "Về chúng tôi"
-      services: "Dịch vụ"
-      contact: "Liên hệ"
-      en: "Tiếng Anh"
-      vi: "Tiếng Việt"
-      signin: "Đăng nhập"
-    footer:
-      copyright: "© Một sản phẩm của Q&P"
-  static_pages:
-    home:
-      join: "THAM GIA CHAT"
-      signup: "Đăng Ký Ngay"
-    about:
-      about: "Về chúng tôi"
-    contact:
-      contact: "Liên hệ"
-      assist: "Chúng tôi ở đây để hỗ trợ bạn."
-    service:
-      incoming: "Nội dung đang được xây dựng..."
-  sessions:
-    new:
-      login: "Đăng nhập"
-      email: "Email"
-      password: "Mật khẩu"
-      remem_pass: "Ghi nhớ đăng nhập"
-  shared:
-    error_messages:
-      err_messages: "Biểu mẫu có chứa"
-      error: "Lỗi"
-  chatrooms:
-    new:
-      create_chatroom: "Tạo Phòng Chat"
-      create: "Tạo ngay"
-      name: "Tên phòng chat"
   controller:
     sessions:
       danger: "Email hoặc mật khẩu không hợp lệ"
     chatrooms:
       create_chatroom_succ: "Tạo thành công"
+      delete_chatroom_succ: "Xóa thành công"
+      delete_chatroom_false: "Xóa thất bại"

@@ -1,6 +1,10 @@
 class UsersController < ApplicationController
-  before_action :load_user, only: %i(show edit update)
-  before_action :logged_in_user, only: %i(show edit update destroy)
+
+  before_action :logged_in_user, only: %i(index edit update destroy)
+  before_action :load_user, only: %i(show edit update destroy)
+  def edit; end
+
+  def show; end
 
   def index
     @users=User.all
@@ -16,14 +20,10 @@ class UsersController < ApplicationController
       flash[:success] = t "signup_succ"
       redirect_to login_path
     else
-    render :new
+      render :new
     end
   end
-
-  def show; end
-
-  def edit; end
-
+  
   def update
     if @user.update_attributes user_params
       flash[:success]= t "update_succ"
