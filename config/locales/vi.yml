@@ -6,6 +6,13 @@ vi:
   chatroom_list: "Danh sách Phòng Chat"
   not_owner_chatroom: "Bạn không phải là chủ phòng Chat này"
   chatrooms:
+    chatroom:
+      show: "Xem"
+      edit: "Sửa"
+      destroy: "Xóa"
+      join: "Vào phòng"
+      leave: "Rời phòng"
+      confirm_delete: "Bạn chắc chắn chưa"
     new:
       create_chatroom: "Tạo Phòng Chat"
       create: "Tạo ngay"
@@ -14,7 +21,6 @@ vi:
       new_chatroom: "Tạo phòng mới"
       chatroom: "Phòng Chat"
       name: "Tên phòng"
-      confirm_delete: "Bạn chắc chắn chưa"
       show: "Xem"
       edit: "Sửa"
       destroy: "Xóa"
@@ -31,7 +37,7 @@ vi:
       profile: "Thông tin"
       settings: "Cài đặt"
       logout: "Đăng xuất"
-      slogan: "FChat - Connected"
+      slogan: "FCHAT - CONNECTED"
       home: "Trang chủ"
       about: "Về chúng tôi"
       services: "Dịch vụ"
@@ -87,6 +93,12 @@ vi:
       password: "Mật khẩu"
       re_password: "Nhập lại mật khẩu"
       save_text: "Lưu thay đổi"
+    show:
+      add-friend: "Thêm bạn"
+      message: "Nhắn tin"
+      back: "Quay lại"
+    index:
+      users: "Người dùng"
   controller:
     sessions:
       danger: "Email hoặc mật khẩu không hợp lệ"

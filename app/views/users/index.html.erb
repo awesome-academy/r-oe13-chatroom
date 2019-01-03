@@ -1,1 +1,25 @@
-<%= render @users %>
+<div class="container">
+  <div class="row">
+    <div class="col-xs-12 col-sm-offset-3 col-sm-6">
+      <div class="panel panel-default">
+        <div class="panel-heading c-list">
+          <span class="title"><%= t ".users" %></span>
+        </div>
+        <div class="row">
+          <div class="col-xs-12">
+            <div class="input-group c-search">
+              <input type="text" class="form-control" id="contact-list-search">
+              <span class="input-group-btn">
+                <button class="btn btn-default" type="button"><span class="glyphicon glyphicon-search text-muted"></span></button>
+              </span>
+            </div>
+          </div>
+        </div>
+        <%= render @users %>
+        <div class="col-md-12">
+          <%= paginate @users, theme: "twitter-bootstrap-3" %>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
