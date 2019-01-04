@@ -2,24 +2,9 @@
 @import 'bootstrap';
 @import '_color.scss';
 
-body{
-  background-image: url(/assets/background.jpeg);
-  background-size: cover;
-  background-attachment: fixed;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-}
-
-h2{
-  font-size: 50px;
-  color: white;
-  margin: 20px 0 30px 0;
-  float: left;
-}
-
 .img-logo{
   display: block;
   margin: -75px auto 0 auto;
-
 }
 
 .bound-back{
@@ -38,7 +23,7 @@ h2{
   background: transparent;
   border: 0px;
   border-radius: 0px;
-  border-bottom: 1px solid white;
+  border-bottom: 1px solid $white;
   font-size: 22px;
   color: gray;
 }
@@ -47,9 +32,9 @@ h2{
   background: transparent;
   border: 0px;
   border-radius: 0px;
-  border-bottom: 1px solid white;
+  border-bottom: 1px solid $white;
   font-size: 22px;
-  color: white;
+  color: $white;
   height: 40px;
 }
 
@@ -84,4 +69,159 @@ small{
   border-radius: 100px;
   border: none;
   height: 40px;
+}
+
+html {
+  font-family: sans-serif;
+  line-height: 1.15;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%; }
+
+body {
+  padding-top: 60px;
+}
+
+section {
+  overflow: auto;
+}
+
+textarea {
+  resize: vertical;
+}
+
+.center {
+  text-align: center;
+}
+
+.center h1 {
+  margin-bottom: 10px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  line-height: 1;
+}
+
+h1 {
+  font-size: 3em;
+  letter-spacing: -2px;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+h2 {
+  font-size: 1.2em;
+  letter-spacing: -1px;
+  margin-bottom: 30px;
+  text-align: center;
+  font-weight: normal;
+  color: gray;
+}
+
+p {
+  font-size: 1.1em;
+  line-height: 1.7em;
+}
+
+footer {
+  margin-top: 45px;
+  padding-top: 5px;
+  border-top: 1px solid $light_gray;
+  color: gray;
+}
+
+html {
+  font-family: sans-serif;
+  line-height: 1.15;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;}
+
+body {
+  margin: 0;
+  font-family: -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", sans-serif;
+  font-size: 2rem;
+  font-weight: normal;
+  line-height: 1.5;
+  color: $light_black;
+  background-image: url(/assets/background.jpeg);
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+  body.has-bg [canvas=container] {
+  background-color: $whitesmoke;
+}
+
+.body-container{
+  background: $white;
+  margin: 75px 35px 75px 35px;
+  border-radius: 10px;
+  height: 500px
+}
+
+article,
+aside,
+footer,
+header,
+nav,
+section {
+  display: block;}
+
+h1 {
+  font-size: 2em;
+  margin: 0.67em 0;}
+
+a:hover{
+  text-decoration: none;
+}
+
+.navbar-nav.navbar-right .btn {
+  z-index: 2;
+  padding: 4px 20px;
+  margin: 10px auto;
+}
+
+.navbar .navbar-collapse .navbar-right > li:last-child {
+  padding-left: 22px;
+}
+
+.navbar .nav-collapse {
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: 0;
+  padding-right: 120px; padding-left: 80px;
+  width: 100%;
+}
+
+.navbar.navbar-default .nav-collapse {
+  background-color: $white;
+}
+
+.navbar.navbar-inverse .nav-collapse {
+  background-color: darkslategrey;
+}
+
+.navbar .nav-collapse .navbar-form {
+  border-width: 0;
+  box-shadow: none;
+}
+
+.nav-collapse>li {
+  float: right;
+}
+
+.btn.btn-circle {
+  border-radius: 50px;
+}
+
+.btn.btn-outline {
+  background-color: transparent;
+}
+
+.slogan{
+  color: orange;
+  font-weight: bold;
 }

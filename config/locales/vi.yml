@@ -13,3 +13,26 @@ vi:
       phone_num: "Số điện thoại"
       password: "Mật khẩu"
       re_password: "Nhập lại mật khẩu"
+  layouts:
+    header:
+      slogan: "FChat - Connected"
+      home: "Trang chủ"
+      about: "Về chúng tôi"
+      services: "Dịch vụ"
+      contact: "Liên hệ"
+      en: "Tiếng Anh"
+      vi: "Tiếng Việt"
+      signin: "Đăng nhập"
+    footer:
+      copyright: "© Một sản phẩm của Q&P"
+  static_pages:
+    home:
+      join: "THAM GIA CHAT"
+      signup: "Đăng Ký Ngay"
+    about:
+      about: "Về chúng tôi"
+    contact:
+      contact: "Liên hệ"
+      assist: "Chúng tôi ở đây để hỗ trợ bạn."
+    service:
+      incoming: "Nội dung đang được xây dựng..."

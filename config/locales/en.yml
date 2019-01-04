@@ -13,3 +13,26 @@ en:
       phone_num: "Phone Number"
       password: "Password"
       re_password: "Password Confirmation"
+  layouts:
+    header:
+      slogan: "FChat - Connected"
+      home: "Home"
+      about: "About"
+      services: "Services"
+      contact: "Contact"
+      en: "English"
+      vi: "Vietnames"
+      signin: "Sing in"
+    footer:
+      copyright: "© Copyright Q&P"
+  static_pages:
+    home:
+      join: "JOIN CHAT"
+      signup: "Sign Up Now"
+    about:
+      about: "About Us"
+    contact:
+      contact: "Contact Us"
+      assist: "We are here assist you."
+    service:
+      incoming: "Incoming..."
