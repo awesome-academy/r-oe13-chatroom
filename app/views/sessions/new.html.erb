@@ -1,8 +1,7 @@
 <div class="container">
   <div class="col-md-5 bound-back">
-    <div class="row center-block">
-      <h2><%= t ".login" %></h2>
-      <img src="/assets/logo.png" class="img-circle img-logo-small">
+    <div class="row text-center">
+      <h2 class="text-title"><%= t ".login" %></h2>
     </div>
     <%= form_for :session, url: login_path do |f| %>
       <div class="input-group">
@@ -13,10 +12,11 @@
         <span class="input-group-addon"><span class="glyphicon glyphicon-lock"></span></span>
         <%= f.password_field :password, class: "form-control", placeholder: t(".password") %>
       </div>
-      <center>
+      <center class="btn-active-control">
         <%= f.check_box :remember_me %>
         <small><%= t ".remem_pass" %></small>
         <%= f.submit t(".login"), class: "btn-success btn-login" %>
+        <%= link_to t(".signup"), signup_path, class: "btn btn-signup btn-primary" %>
       </center>
     <% end %>
   </div>

@@ -1,0 +1,26 @@
+<%= form_for @user do |f| %>
+  <%= render "shared/error_messages", object: f.object %>
+  <div class="input-group">
+    <span class="input-group-addon"><span class="glyphicon glyphicon-user"></span></span>
+    <%= f.text_field :name, class: "form-control", placeholder: t(".name") %>
+  </div>
+  <div class="input-group">
+    <span class="input-group-addon"><span class="glyphicon glyphicon-envelope"></span></span>
+    <%= f.text_field :email, class: "form-control", placeholder: t(".email") %>
+  </div>
+  <div class="input-group">
+    <span class="input-group-addon"><span class="glyphicon glyphicon-phone"></span></span>
+    <%= f.text_field :phone_number, class: "form-control", placeholder: t(".phone_num") %>
+  </div>
+  <div class="input-group">
+    <span class="input-group-addon"><span class="glyphicon glyphicon-lock"></span></span>
+    <%= f.password_field :password, class: "form-control", placeholder: t(".password") %>
+  </div>
+  <div class="input-group">
+    <span class="input-group-addon"><span class="glyphicon glyphicon-repeat"></span></span>
+    <%= f.password_field :password_confirmation, class: "form-control", placeholder: t(".re_password") %>
+  </div>
+  <center class="btn-active-control">
+    <%= f.submit yield(:button_text), class: "btn-success btn-signup" %>
+  </center>
+<% end %>

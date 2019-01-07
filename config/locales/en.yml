@@ -1,10 +1,15 @@
 en:
+  not_found: "Not found user"
+  update_succ: "Update success"
+
   sessions:
     new:
+      signup: "Sign Up Now"
       login: "Login"
       email: "Email"
       password: "Password"
       remem_pass: "Remmember Password"
+
   users:
     new:
       signup: "Signup"
@@ -13,6 +18,15 @@ en:
       phone_num: "Phone Number"
       password: "Password"
       re_password: "Password Confirmation"
+
+    form:
+      signup: "Signup"
+      name: "Name"
+      email: "Email"
+      phone_num: "Phone Number"
+      password: "Password"
+      re_password: "Password Confirmation"
+
   layouts:
     header:
       slogan: "FChat - Connected"
@@ -22,17 +36,36 @@ en:
       contact: "Contact"
       en: "English"
       vi: "Vietnames"
-      signin: "Sing in"
+      signin: "Sign in"
+
     footer:
       copyright: "© Copyright Q&P"
+
   static_pages:
     home:
       join: "JOIN CHAT"
       signup: "Sign Up Now"
+
     about:
       about: "About Us"
+
     contact:
       contact: "Contact Us"
       assist: "We are here assist you."
+
     service:
       incoming: "Incoming..."
+
+    edit:
+      edit_text: "Edit Profile"
+      name: "Name"
+      email: "Email"
+      phone_num: "Phone Number"
+      password: "Password"
+      re_password: "Password Confirmation"
+      save_text: "Save change"
+
+  shared:
+    error_messages:
+      err_messages: "The form contains"
+      error: "error"

@@ -6,5 +6,6 @@ Rails.application.routes.draw do
     get "/contact", to: "static_pages#contact"
     get "/service", to: "static_pages#service"
     root "static_pages#home"
+    resources :users, except: %i(destroy create)
   end
 end
