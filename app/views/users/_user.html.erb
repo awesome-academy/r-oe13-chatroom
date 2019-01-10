@@ -1,13 +1,18 @@
-<ul class="list-group" id="contact-list">
-  <li class="list-group-item">
-    <%= link_to user do %>
-      <div class="col-xs-12 col-sm-2">
-        <%= image_tag("default-user.png", alt: user.name, class: "img-responsive img-circle") =%>
-      </div>
-      <div class="col-xs-12 col-sm-10">
-        <span class="name"><%= user.name %></span>
-      </div>
-      <div class="clearfix"></div>
-    <% end %>
-  </li>
-</ul>
+<% if user.id != current_user.id %>
+  <ul class="list-group" id="contact-list">
+    <li class="list-group-item">
+      <%= link_to user do %>
+        <div class="col-xs-12 col-sm-2">
+          <%= image_tag "/assets/default-user.png", alt: user.name, class: "img-responsive" %>
+        </div>
+        <div class="col-xs-12 col-sm-10">
+          <span class="name"><%= user.name %></span>
+          <% if current_user.friend?(user) %>
+          <%= link_to t(".unfriend"), relationship_path(user.id), method: :delete, data: {confirm: t("sure?")}, class: "btn-default btn" %>
+          <% end %>
+        </div>
+        <div class="clearfix"></div>
+      <% end %>
+    </li>
+  </ul>
+<% end %>

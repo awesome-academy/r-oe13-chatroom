@@ -3,9 +3,9 @@
 @import '_color.scss';
 
 @font-face {
-  font-family: 'Bariol Regular';   
-  src:font-url('bariol_regular-webfont.eot') format('eot'),  
-      font-url('bariol_regular-webfont.woff') format('woff'),  
+  font-family: 'Bariol Regular';
+  src:font-url('bariol_regular-webfont.eot') format('eot'),
+      font-url('bariol_regular-webfont.woff') format('woff'),
       font-url('bariol_regular-webfont.ttf') format('ttf');
   font-weight: normal;
   font-style: normal;
@@ -272,7 +272,7 @@ a:hover{
   .form-control {
     color: $state-danger-text;
   }
-};
+}
 
 footer{
   position: absolute;
@@ -327,32 +327,10 @@ footer{
 /*Show user*/
 
 input[type=text] {
-  width: 130px;
+  width: 100px;
   -webkit-transition: width 0.4s ease-in-out;
   transition: width 0.4s ease-in-out;
   color: $black;
-}
-
-.c-search .form-control {
-  border-radius: 0px;
-  border-width: 0px;
-  border-bottom-width: 1px;
-  font-size: 1.3em;
-  padding: 12px 12px;
-  height: 44px;
-  outline: none !important;
-}
-.c-search .form-control:focus {
-  outline:0px !important;
-  -webkit-appearance:none;
-  box-shadow: none;
-}
-.c-search .input-group-btn .btn {
-  border-radius: 0px;
-  border-width: 0px;
-  border-left-width: 1px;
-  border-bottom-width: 1px;
-  height: 44px;
 }
 
 .c-list {
@@ -394,8 +372,8 @@ ul.c-controls li a:hover {
 }
 
 .name {
-    font-size: 1.7em;
-    font-weight: 700;
+    font-size: 1.5em;
+    font-weight: 500;
 }
 
 .c-info {

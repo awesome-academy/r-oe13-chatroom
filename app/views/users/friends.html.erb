@@ -1,0 +1,29 @@
+<div class="container">
+  <div class="row">
+    <div class="col-xs-12 col-sm-offset-3 col-sm-6">
+      <div class="panel panel-default">
+        <div class="panel-heading c-list">
+          <span class="title"><%= t ".friends_list" %></span>
+        </div>
+        <div class="row">
+          <div class="col-xs-12">
+            <div class="input-group">
+              <%= search_form_for @q do |f| %>
+                <div class="col-xs-11">
+                  <%= f.text_field :name_or_email_or_phone_number_cont, class: "form-control",placeholder: t("search_placeholder") %>
+                </div>
+                <div class="col-xs-1">
+                  <%= f.submit t("search"), class: "btn btn-primary"  %>
+                </div>
+              <% end %>
+            </div>
+          </div>
+        </div>
+        <%= render @users %>
+        <div class="col-md-12">
+          <%= paginate @users, theme: "twitter-bootstrap-3" %>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
