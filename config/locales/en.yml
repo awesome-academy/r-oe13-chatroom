@@ -87,6 +87,12 @@ en:
       password: "Password"
       re_password: "Password Confirmation"
       save_text: "Save change"
+    show:
+      add-friend: "Add friend"
+      message: "Message"
+      back: "Back"
+    index:
+      users: "Users"
   controller:
     sessions:
       danger: "Invalid email/password combination"

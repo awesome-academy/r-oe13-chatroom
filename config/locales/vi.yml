@@ -31,7 +31,7 @@ vi:
       profile: "Thông tin"
       settings: "Cài đặt"
       logout: "Đăng xuất"
-      slogan: "FChat - Connected"
+      slogan: "FCHAT - CONNECTED"
       home: "Trang chủ"
       about: "Về chúng tôi"
       services: "Dịch vụ"
@@ -87,6 +87,12 @@ vi:
       password: "Mật khẩu"
       re_password: "Nhập lại mật khẩu"
       save_text: "Lưu thay đổi"
+    show:
+      add-friend: "Thêm bạn"
+      message: "Nhắn tin"
+      back: "Quay lại"
+    index:
+      users: "Người dùng"
   controller:
     sessions:
       danger: "Email hoặc mật khẩu không hợp lệ"
