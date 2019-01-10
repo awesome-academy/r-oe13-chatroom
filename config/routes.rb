@@ -1,6 +1,4 @@
 Rails.application.routes.draw do
-  get 'friends/index'
-  get 'friends/destroy'
   resources :friend_requests
   scope "(:locale)", locale: /en|vi/ do
     get "/login", to: "sessions#new"
@@ -18,8 +16,8 @@ Rails.application.routes.draw do
     resources :chatrooms do
       resource :chatroom_users
     end
-  end
     resources :users
     resources :sessions
     resources :relationships
+  end
 end
