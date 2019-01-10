@@ -6,7 +6,6 @@ ruby "2.5.3"
 gem "rails", "~> 5.2.2"
 gem "bootstrap-sass"
 gem "jquery-rails"
-gem "mysql2", ">= 0.4.4", "< 0.6.0"
 gem "turbolinks", "~> 5"
 gem "bootstrap-sass"
 gem "jquery-rails"
@@ -28,7 +27,12 @@ group :development, :test do
   gem "byebug", platforms: [:mri, :mingw, :x64_mingw]
 end
 
+group :production do
+  gem "pg"
+end
+
 group :development do
+  gem "mysql2", ">= 0.4.4", "< 0.6.0"
   gem "web-console", ">= 3.3.0"
   gem "listen", ">= 3.0.5", "< 3.2"
   gem "spring"
