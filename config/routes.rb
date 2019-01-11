@@ -10,7 +10,10 @@ Rails.application.routes.draw do
     get "/service", to: "static_pages#service"
     get "/index", to: "static_pages#index"
     root "static_pages#home"
-    resources :chatrooms
-    resources :users
+    resources :chatrooms do
+      resource :chatroom_users
+    end
   end
+    resources :users
+    resources :sessions
 end

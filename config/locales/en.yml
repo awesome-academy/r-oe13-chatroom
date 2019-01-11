@@ -1,10 +1,46 @@
 en:
   not_found: "Not found user"
+  not_found_chatroom: "Not found Chatroom"
   update_succ: "Update success"
   signup_succ: "Signup success"
-  shared:
-    error_messages:
-      mes: "The form contains "
+  chatroom_list: "Chatrooms list"
+  not_owner_chatroom: "You not owner chatroom"
+  chatrooms:
+    new:
+      create_chatroom: "Create Chatroom"
+      create: "Create"
+      name: "Chatroom Name"
+    index:
+      new_chatroom: "New Chatroom"
+      chatroom: "Chatroom"
+      name: "Name"
+      confirm_delete: "Are you sure?"
+      show: "Show"
+      edit: "Edit"
+      destroy: "Destroy"
+      join: "Join"
+      leave: "Leave"
+    show:
+      name: "Name"
+      member: "Member"
+      edit: "Edit"
+      back: "Back"
+  layouts:
+    header:
+      account: "Account"
+      profile: "Profile"
+      settings: "Settings"
+      logout: "Log out"
+      slogan: "FCHAT - CONNECTED"
+      home: "Home"
+      about: "About"
+      services: "Services"
+      contact: "Contact"
+      en: "English"
+      vi: "Vietnames"
+      signin: "Sign in"
+    footer:
+      copyright: "© Copyright Q&P"
   sessions:
     new:
       signup: "Sign Up Now"
@@ -12,6 +48,22 @@ en:
       email: "Email"
       password: "Password"
       remem_pass: "Remmember Password"
+  shared:
+    error_messages:
+      err_messages: "The form contains"
+      error: "error"
+  static_pages:
+    home:
+      join: "JOIN CHAT"
+      signup: "Sign Up Now"
+      chatnow: "Chat Now"
+    about:
+      about: "About Us"
+    contact:
+      contact: "Contact Us"
+      assist: "We are here assist you."
+    service:
+      incoming: "Incoming..."
   users:
     new:
       signup: "Signup"
@@ -35,45 +87,10 @@ en:
       password: "Password"
       re_password: "Password Confirmation"
       save_text: "Save change"
-  layouts:
-    header:
-      account: "Account"
-      profile: "Profile"
-      settings: "Settings"
-      logout: "Log out"
-      re_password: "Password Confirmation"
-      slogan: "FCHAT - CONNECTED"
-      home: "Home"
-      about: "About"
-      services: "Services"
-      contact: "Contact"
-      en: "English"
-      vi: "Vietnames"
-      signin: "Sign in"
-    footer:
-      copyright: "© Copyright Q&P"
-  static_pages:
-    home:
-      join: "JOIN CHAT"
-      signup: "Sign Up Now"
-    about:
-      about: "About Us"
-    contact:
-      contact: "Contact Us"
-      assist: "We are here assist you."
-    service:
-      incoming: "Incoming..."
-  shared:
-    error_messages:
-      err_messages: "The form contains"
-      error: "error"
-  chatrooms:
-    new:
-      create_chatroom: "Create Chatroom"
-      create: "Create"
-      name: "Chatroom Name"
   controller:
     sessions:
       danger: "Invalid email/password combination"
     chatrooms:
       create_chatroom_succ: "Create Complete"
+      delete_chatroom_succ: "Delete Success"
+      delete_chatroom_false: "Delete False"

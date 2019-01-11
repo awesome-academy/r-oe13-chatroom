@@ -2,8 +2,13 @@
   <div class="col-md-4">
     <center>
       <br>
-      <h1><%= t ".join" %></h1>
-      <%= link_to t(".signup"), signup_path, class: "btn btn-lg btn-primary" %>
+      <% if logged_in? %>
+        <h1><%= t ".join" %></h1>
+        <%= link_to t(".chatnow"), chatrooms_path, class: "btn btn-lg btn-primary" %>
+      <% else %>
+        <h1><%= t ".join" %></h1>
+        <%= link_to t(".signup"), signup_path, class: "btn btn-lg btn-primary" %>
+      <% end %>
     </center>
   </div>
   <div class="col-md-8">

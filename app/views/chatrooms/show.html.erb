@@ -1,0 +1,14 @@
+<p>
+  <strong><%= t ".name" %></strong>
+  <%= @chatroom.name %>
+</p>
+<p>
+  <strong><%= t ".member" %></strong>
+  <% @member.each do |member| %>
+  <p><%= member.name %></p>
+  <% end %>
+</p>
+<% if owner_chatroom(@chatroom) %>
+  <%= link_to t(".edit"), "#" %>
+<% end %>
+<%= link_to t(".back"), chatrooms_path %>
