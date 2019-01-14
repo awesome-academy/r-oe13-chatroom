@@ -4,6 +4,7 @@ class User < ApplicationRecord
   has_many :chatrooms, through: :chatroom_users, foreign_key: "owner_id"
   has_many :messages
   has_many :relationalships
+  scope :order_by, -> (order_type = :desc){order(id: order_type)}
 
   validates :name, presence: true, length: {maximum: Settings.max_name}
   VALID_EMAIL_REGEX = /\A[\w+\-.]+@[a-z\d\-.]+\.[a-z]+\z/i

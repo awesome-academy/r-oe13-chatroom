@@ -7,7 +7,7 @@ class UsersController < ApplicationController
   def show; end
 
   def index
-    @users=User.all
+    @users = User.order_by.page(params[:page]).per(Settings.permit)
   end
 
   def new
@@ -23,7 +23,7 @@ class UsersController < ApplicationController
       render :new
     end
   end
-  
+
   def update
     if @user.update_attributes user_params
       flash[:success]= t "update_succ"
