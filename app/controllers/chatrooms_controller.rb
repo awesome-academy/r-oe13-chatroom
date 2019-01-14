@@ -25,7 +25,7 @@ class ChatroomsController < ApplicationController
   end
 
   def destroy
-    if owner_chatroom == true
+    if is_chatroom_owner?
       if @chatroom.destroy
         flash[:info] = t "controller.chatrooms.delete_chatroom_succ"
       else
@@ -51,12 +51,7 @@ class ChatroomsController < ApplicationController
     redirect_to chatrooms_path
   end
 
-  def owner_chatroom
-    @chatroom = Chatroom.find_by id: params[:id]
-    if @chatroom.owner_id == current_user.id
-      return true
-    else
-      return false
-    end
+  def is_chatroom_owner?
+    @chatroom.owner_id == current_user.id
   end
 end

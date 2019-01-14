@@ -6,6 +6,13 @@ en:
   chatroom_list: "Chatrooms list"
   not_owner_chatroom: "You not owner chatroom"
   chatrooms:
+    chatroom:
+      show: "Show"
+      edit: "Edit"
+      destroy: "Destroy"
+      join: "Join"
+      leave: "Leave"
+      confirm_delete: "Are you sure?"
     new:
       create_chatroom: "Create Chatroom"
       create: "Create"
@@ -14,7 +21,6 @@ en:
       new_chatroom: "New Chatroom"
       chatroom: "Chatroom"
       name: "Name"
-      confirm_delete: "Are you sure?"
       show: "Show"
       edit: "Edit"
       destroy: "Destroy"
