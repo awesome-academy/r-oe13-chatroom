@@ -1,0 +1,24 @@
+<div class="col-md-3 list-member">
+  <div class="row heading">
+    <div class="col-md-3 heading-icon">
+      <span class="glyphicon glyphicon-user"></span>
+    </div>
+    <div class="col-md-9 pull-left">
+      <h4><%= t (".member_head") %></h4>
+    </div>
+  </div>
+  <div class="row sideBar">
+    <% @member.each do |member| %>
+      <%= link_to user_path(member.user.id) do %>
+        <div class="row sideBar-body" id="member-<%= member.user.id %>">
+          <div class="col-md-2 sideBar-icon">
+            <%= image_tag("default-user.png", class: "img-responsive img-circle") %>
+          </div>
+          <div class="col-md-9 pull-left">
+            <h4><%= member.name %></h4>
+          </div>
+        </div>
+      <% end %>
+    <% end %>
+  </div>
+</div>

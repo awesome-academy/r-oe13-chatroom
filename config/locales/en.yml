@@ -13,6 +13,8 @@ en:
       join: "Join"
       leave: "Leave"
       confirm_delete: "Are you sure?"
+    member:
+      member_head: "Member"
     new:
       create_chatroom: "Create Chatroom"
       create: "Create"
@@ -32,6 +34,8 @@ en:
       edit: "Edit"
       back: "Back"
   layouts:
+    chatrooms_list:
+      my_chat: "My Chat"
     header:
       account: "Account"
       profile: "Profile"
@@ -93,6 +97,12 @@ en:
       password: "Password"
       re_password: "Password Confirmation"
       save_text: "Save change"
+    show:
+      add-friend: "Add friend"
+      message: "Message"
+      back: "Back"
+    index:
+      users: "Users"
   controller:
     sessions:
       danger: "Invalid email/password combination"

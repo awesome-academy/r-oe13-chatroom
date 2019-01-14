@@ -8,19 +8,19 @@
     <%= javascript_include_tag "application", "data-turbolinks-track": "reload" %>
   </head>
   <body>
-    <div class="container content">
+    <div class="container content clearfix">
       <div class="row error-box">
         <% flash.each do |message_type, message| %>
           <%= content_tag(:div, message, class: "alert alert-#{message_type}") %>
         <% end %>
       </div>
       <%= render "layouts/header" %>
-      <div class="body-container">
+      <div class="body-container app">
         <div class="row">
-          <div class="col-md-2">
+          <div class="col-md-3 side">
             <%= render "layouts/chatrooms_list" %>
           </div>
-          <div class="col-md-8">
+          <div class="col-md-9 conversation">
             <%= yield %>
           </div>
         </div>
