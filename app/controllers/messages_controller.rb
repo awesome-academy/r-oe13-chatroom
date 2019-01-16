@@ -8,6 +8,7 @@ class MessagesController < ApplicationController
     else
       flash[:danger] = t "controller.messages.sen_mess_false"
     end
+    MessageRelayJob.perform_later(message)
     redirect_to @chatroom
   end
 

@@ -5,6 +5,15 @@ $(document).on('turbolinks:load', function () {
       $(this).submit();
     }
   });
+
+  $('#new_message').on('submit', function (e) {
+    e.preventDefault();
+    var body, chatroom_id;
+    chatroom_id = $("[data-behavior='messages']").data("chatroom-id");
+    body = $("#message_body");
+    App.chatrooms.send_message(chatroom_id, body.val());
+    body.val("");
+  });
 });
 
 $(document).ready(function () {

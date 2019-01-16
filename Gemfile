@@ -13,6 +13,7 @@ gem "jquery-rails"
 gem "rails-i18n"
 gem "bcrypt"
 gem "config"
+gem "redis"
 gem "font-awesome-rails"
 gem "puma", "~> 3.11"
 gem "sass-rails", "~> 5.0"
@@ -26,6 +27,8 @@ gem "bootsnap", ">= 1.1.0", require: false
 
 group :development, :test do
   gem "byebug", platforms: [:mri, :mingw, :x64_mingw]
+  gem "rspec-rails", "~> 3.0"
+  gem "shoulda-matchers", "4.0.0.rc1"
 end
 
 group :development do
