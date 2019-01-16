@@ -19,7 +19,7 @@ RSpec.describe User, type: :model do
     }
     it {
       should validate_presence_of(:email)
-      should allow_values("foobar@gmail.com","12346").for(:email)
+      should allow_values("foobar@gmail.com").for(:email)
       should validate_length_of(:email).is_at_most(Settings.max_email)
     }
     it{
