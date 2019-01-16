@@ -1,7 +1,7 @@
-<tr>
+<tr id="listroom-<%= chatroom.id %>">
   <td><%= chatroom.name %><td>
   <td><%= link_to t(".show"),chatroom %><td>
-  <% if owner_chatroom(chatroom) %>
+  <% if owner_chatroom(chatroom, current_user.id) %>
     <td><%= link_to t(".edit"), edit_chatroom_path(chatroom) %><td>
     <td><%= link_to t(".destroy"),chatroom_path(chatroom), method: :delete, data: { confirm: t(".confirm_delete") } %><td>
   <% end %>

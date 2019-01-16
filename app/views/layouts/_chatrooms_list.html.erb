@@ -1,6 +1,34 @@
-<h5><%= t ".chatroom_list" %></h5>
-<ul>
-  <% current_user.chatrooms.each do |chatroom| %>
-    <li id="chatroom-<%= chatroom.id %>"><%= link_to chatroom.name, chatroom %></li>
-  <% end %>
-</ul>
+<div class="side-one">
+  <div class="row heading">
+    <div class="col-md-2 home-icon">
+      <span class="glyphicon glyphicon-home"></span>
+    </div>
+    <div class="col-md-7 pull-left">
+      <h4><%= t (".my_chat") %></h4>
+    </div>
+    <div class="col-md-1 pull-right">
+      <%= link_to new_chatroom_path do %>
+        <span class="glyphicon glyphicon-pencil"></span>
+      <% end %>
+    </div>
+  </div>
+  <div class="row sideBar">
+    <% current_user.chatrooms.each do |chatroom| %>
+      <%= link_to chatroom do%>
+        <div class="row sideBar-body" id="chatroom-<%= chatroom.id %>">
+          <div class="col-md-2 sideBar-icon">
+            <span class="glyphicon glyphicon-envelope">
+          </div>
+          <div class="col-md-8 pull-left">
+            <h4><%= chatroom.name %></h4>
+          </div>
+          <div class="col-md-2 pull-right">
+            <%= link_to chatroom_chatroom_users_path(chatroom), method: :delete, remote: :true do %>
+              <span class="glyphicon glyphicon-off"></span>
+            <% end %>
+          </div>
+        </div>
+      <% end %>
+    <% end %>
+  </div>
+</div>

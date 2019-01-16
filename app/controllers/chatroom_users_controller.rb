@@ -10,7 +10,6 @@ class ChatroomUsersController < ApplicationController
     respond_to do |format|
       @chatroom_user = @chatroom.chatroom_users.by_user(current_user.id).destroy_all
       format.js {render layout: false}
-      format.html {redirect_to chatrooms_path}
     end
   end
 

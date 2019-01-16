@@ -6,21 +6,23 @@
     <%= csp_meta_tag %>
     <%= stylesheet_link_tag "application", media: "all", "data-turbolinks-track": "reload" %>
     <%= javascript_include_tag "application", "data-turbolinks-track": "reload" %>
+    <%= favicon_link_tag "logo.ico" %>
   </head>
   <body>
-    <div class="container content">
+    <%= render "layouts/not_resize_page" %>
+    <div class="container content clearfix">
       <div class="row error-box">
         <% flash.each do |message_type, message| %>
           <%= content_tag(:div, message, class: "alert alert-#{message_type}") %>
         <% end %>
       </div>
       <%= render "layouts/header" %>
-      <div class="body-container">
+      <div class="body-container app">
         <div class="row">
-          <div class="col-md-2">
+          <div class="col-md-3 side">
             <%= render "layouts/chatrooms_list" %>
           </div>
-          <div class="col-md-8">
+          <div class="col-md-9 conversation">
             <%= yield %>
           </div>
         </div>

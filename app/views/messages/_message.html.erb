@@ -1,0 +1,13 @@
+<div class="row message-body">
+  <div class="col-md-12 message-main-<%= mess_of_user(message) ? 'sender': 'receiver' %>">
+    <div class="<%= mess_of_user(message) ? 'sender': 'receiver' %>">
+      <div class="message-text">
+        <%= message.body %>
+      </div>
+      <span class="message-time pull-right">
+        <%= message.user_name %>
+        <%= time_ago_in_words(message.created_at) %>
+      </span>
+    </div>
+  </div>
+</div>

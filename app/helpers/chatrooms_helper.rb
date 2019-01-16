@@ -1,5 +1,5 @@
 module ChatroomsHelper
-  def owner_chatroom chatroom
-    chatroom.owner_id == current_user.id
+  def owner_chatroom (chatroom, user)
+    chatroom.owner_id == user
   end
 end
