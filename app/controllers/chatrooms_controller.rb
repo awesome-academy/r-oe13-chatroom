@@ -6,7 +6,8 @@ class ChatroomsController < ApplicationController
   end
 
   def index
-    @chatrooms = Chatroom.all
+    @q = Chatroom.ransack(params[:q])
+    @chatrooms = @q.result.page(params[:page]).per(Settings.permit)
   end
 
   def new

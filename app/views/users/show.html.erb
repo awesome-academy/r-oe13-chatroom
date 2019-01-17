@@ -19,7 +19,11 @@
           </li>
           <div class="profile-userbuttons">
             <% if @user.id != current_user.id %>
-              <%= link_to t(".add-friend"),friend_requests_path(friend_id: @user), method: :post, class: "btn btn-success btn-sm"%>
+              <% if current_user.friend?(@user) %>
+                <%= link_to t(".unfriend"), relationship_path(@user.id), method: :delete, data: {confirm: t("sure?")}, class: "btn-default btn" %>
+              <% else %>
+                <%= link_to t(".add-friend"),friend_requests_path(friend_id: @user), method: :post, class: "btn btn-success btn-sm"%>
+              <% end %>
               <%= link_to t(".message"),"#", class: "btn btn-danger btn-sm" %>
               <%= link_to t(".back"), users_path, class: "btn btn-primary btn-sm" %>
             <% else %>

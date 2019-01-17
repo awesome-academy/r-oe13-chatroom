@@ -121,6 +121,7 @@ en:
       message: "Message"
       back: "Back"
       edit: "Edit"
+      unfriend: "Unfriend"
     index:
       users: "Users"
     friends:

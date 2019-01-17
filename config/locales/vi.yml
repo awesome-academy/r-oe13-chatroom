@@ -121,6 +121,7 @@ vi:
       message: "Nhắn tin"
       back: "Quay lại"
       edit: "Chỉnh sửa"
+      unfriend: "Xóa bạn"
     index:
       users: "Danh sách người dùng"
     friends:

@@ -10,7 +10,7 @@
             <div class="input-group">
               <%= search_form_for @q do |f| %>
                 <div class="col-xs-11">
-                  <%= f.text_field :name_or_email_or_phone_number_cont, class: "form-control",placeholder: t("search_placeholder") %>
+                  <%= f.text_field :name_or_email_or_phone_number_cont, class: "form-control", placeholder: t("search_placeholder") %>
                 </div>
                 <div class="col-xs-1">
                   <%= f.submit t("search"), class: "btn btn-primary"  %>
