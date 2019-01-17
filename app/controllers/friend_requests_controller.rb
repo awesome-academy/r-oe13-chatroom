@@ -3,13 +3,17 @@ class FriendRequestsController < ApplicationController
 
   def create
     friend = User.find_by id: params[:friend_id]
-    @friend_request = current_user.friend_request.new(friend: friend)
-    if @friend_request.save
-      flash[:success] = t "request_sent"
-      redirect_to root_url
+    unless current_user.friend? friend
+      @friend_request = current_user.friend_request.new(friend: friend)
+      if @friend_request.save
+        flash[:success] = t "request_sent"
+      else
+        flash[:error] = t "request_error"
+      end
+    redirect_to friend_requests_url
     else
-      flash[:error] = t "request_error"
-      redirect_to root_url
+      flash[:infor] = t "friendship"
+      redirect_to user_url(friend)
     end
   end
 
@@ -28,15 +32,15 @@ class FriendRequestsController < ApplicationController
   end
 
   def update
-    @relationship = current_user.relationships.new(friend: @friend_request.friend)
+    @relationship = current_user.relationships.new(friend: @friend_request.user)
     if @relationship.save
       flash[:success] = t "add_friend"
       @friend_request.destroy
       redirect_to friends_url
     else
       flash[:error] = t "add_friend_err"
-    end
       redirect_to friend_requests_url
+    end
   end
 
   private
