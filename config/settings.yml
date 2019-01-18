@@ -4,3 +4,4 @@ min_pass: 6
 min_phone: 10
 max_phone: 15
 permit: 5
+limit_mess: 100

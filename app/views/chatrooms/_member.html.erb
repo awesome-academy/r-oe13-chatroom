@@ -1,0 +1,15 @@
+<%= link_to user_path(member.user_id) do %>
+  <div class="row sideBar-body" id="member-<%= member.user_id %>">
+    <div class="col-md-2 sideBar-icon">
+      <%= image_tag("default-user.png", class: "img-responsive img-circle") %>
+    </div>
+    <div class="col-md-7 pull-left">
+      <h4><%= member.user_name %></h4>
+    </div>
+    <% if owner_chatroom(@chatroom, member.user_id) %>
+      <div class="col-md-2 pull-left">
+        <span class="glyphicon glyphicon-star"></span>
+      </div>
+    <% end %>
+  </div>
+<% end %>

@@ -26,6 +26,8 @@ en:
       join: "Join"
       leave: "Leave"
       confirm_delete: "Are you sure?"
+    member_list:
+      member_head: "Member"
     new:
       create_chatroom: "Create Chatroom"
       create: "Create"
@@ -55,6 +57,8 @@ en:
       cancel: "Cancel"
       friendrequest: "FRIEND REQUESTS"
   layouts:
+    chatrooms_list:
+      my_chat: "My Chat"
     header:
       account: "Account"
       profile: "Profile"
@@ -70,6 +74,9 @@ en:
       signin: "Sign in"
     footer:
       copyright: "© Copyright Q&P"
+    not_resize_page:
+      not_resize: "Application displays based on screen's rate."
+      notice_resize: "Please do not resize the browser ..."
   sessions:
     new:
       signup: "Sign Up Now"
@@ -134,3 +141,5 @@ en:
       create_chatroom_succ: "Create Complete"
       delete_chatroom_succ: "Delete Success"
       delete_chatroom_false: "Delete False"
+    messages:
+      sen_mess_false: "Send Messages False"

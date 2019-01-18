@@ -3,6 +3,7 @@ class ChatroomsController < ApplicationController
   before_action :set_chatroom, except: %i(index new create)
   def show
     @member = @chatroom.chatroom_users
+    @messages = @chatroom.messages.order_asc.limit(Settings.limit_mess)
   end
 
   def index

@@ -1,14 +1,42 @@
-<p>
-  <strong><%= t ".name" %></strong>
-  <%= @chatroom.name %>
-</p>
-<p>
-  <strong><%= t ".member" %></strong>
-  <% @member.each do |member| %>
-  <p><%= member.name %></p>
-  <% end %>
-</p>
-<% if owner_chatroom(@chatroom) %>
-  <%= link_to t(".edit"), edit_chatroom_path %>
-<% end %>
-<%= link_to t(".back"), chatrooms_path %>
+<div class="col-md-9 list-messages">
+  <div class="row heading">
+    <div class="col-md-1 heading-icon">
+      <span class="glyphicon glyphicon-envelope"></span>
+    </div>
+    <div class="col-md-9 heading-name">
+      <a class="heading-name-meta"><%= @chatroom.name %></a>
+    </div>
+    <div class="col-md-1 heading-back pull-right">
+      <%= link_to chatrooms_path do%>
+        <span class="glyphicon glyphicon-log-out"></span>
+      <% end %>
+    </div>
+    <% if owner_chatroom(@chatroom, current_user.id) %>
+      <div class="col-md-1 heading-back pull-right">
+        <span class="glyphicon glyphicon-cog"></span>
+      </div>
+    <% end %>
+  </div>
+  <div class="row message" id="conversation">
+    <% @messages.each do |message| %>
+      <%= render message %>
+    <% end %>
+  </div>
+  <div class="row reply">
+    <%= form_for [@chatroom, Message.new] do |f| %>
+      <div class="col-md-1 reply-emojis">
+        <i class="glyphicon glyphicon-picture"></i>
+      </div>
+      <div class="col-md-9 reply-main">
+        <%= f.text_area :body, rows:"1", class: "form-control", autofocus: true %>
+      </div>
+      <div class="col-md-1 reply-recording">
+        <i class="glyphicon glyphicon-facetime-video" aria-hidden="true"></i>
+      </div>
+      <div class="col-md-1 reply-send">
+        <i class="glyphicon glyphicon-send" aria-hidden="true"></i>
+      </div>
+    <% end %>
+  </div>
+</div>
+<%= render "chatrooms/member_list" %>

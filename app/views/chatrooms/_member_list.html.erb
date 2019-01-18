@@ -1,0 +1,13 @@
+<div class="col-md-3 list-member">
+  <div class="row heading">
+    <div class="col-md-3 heading-icon">
+      <span class="glyphicon glyphicon-user"></span>
+    </div>
+    <div class="col-md-9 pull-left">
+      <h4><%= t (".member_head") %></h4>
+    </div>
+  </div>
+  <div class="row sideBar">
+    <%= render partial: "chatrooms/member", collection: @member, as: :member %>
+  </div>
+</div>

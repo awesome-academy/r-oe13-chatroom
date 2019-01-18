@@ -15,6 +15,7 @@ Rails.application.routes.draw do
     root "static_pages#home"
     resources :chatrooms do
       resource :chatroom_users
+      resource :messages
     end
     resources :users
     resources :sessions
