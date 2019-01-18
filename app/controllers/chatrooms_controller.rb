@@ -24,6 +24,19 @@ class ChatroomsController < ApplicationController
     end
   end
 
+  def update
+    if is_chatroom_owner?
+      if @chatroom.update_attributes chatroom_params
+        flash[:success]= t "update_succ"
+        redirect_to chatrooms_path
+      else
+        render :edit
+      end
+    else
+      flash[:danger] = t "not_owner_chatroom"
+    end
+  end
+
   def destroy
     if is_chatroom_owner?
       if @chatroom.destroy
@@ -31,15 +44,14 @@ class ChatroomsController < ApplicationController
       else
         flash[:danger] = t "controller.chatrooms.delete_chatroom_false"
       end
-      redirect_to chatrooms_path
     else
       flash[:danger] = t "not_owner_chatroom"
-      redirect_to chatrooms_path
     end
+      redirect_to chatrooms_path
   end
 
   private
-  
+
   def chatroom_params
     params.require(:chatroom).permit :name, :owner_id
   end

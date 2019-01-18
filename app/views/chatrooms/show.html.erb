@@ -9,6 +9,6 @@
   <% end %>
 </p>
 <% if owner_chatroom(@chatroom) %>
-  <%= link_to t(".edit"), "#" %>
+  <%= link_to t(".edit"), edit_chatroom_path %>
 <% end %>
 <%= link_to t(".back"), chatrooms_path %>

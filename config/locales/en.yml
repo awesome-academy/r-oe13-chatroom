@@ -1,4 +1,5 @@
 en:
+  friendship: "This person is your friend"
   sure?: "Are you sure?"
   not_found: "Not found user"
   not_found_chatroom: "Not found Chatroom"
@@ -20,7 +21,7 @@ en:
   chatrooms:
     chatroom:
       show: "Show"
-      edit: "Edit"
+      edit: "Change name"
       destroy: "Destroy"
       join: "Join"
       leave: "Leave"
@@ -34,15 +35,18 @@ en:
       chatroom: "Chatroom"
       name: "Name"
       show: "Show"
-      edit: "Edit"
+      edit: "Change name"
       destroy: "Destroy"
       join: "Join"
       leave: "Leave"
     show:
       name: "Name"
       member: "Member"
-      edit: "Edit"
+      edit: "Change name"
       back: "Back"
+    edit:
+      change: "Change"
+      change_name: "Change name"
   friend_requests:
     index:
       incoming: "INCOMING"
