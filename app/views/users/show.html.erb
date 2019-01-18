@@ -1,35 +1,37 @@
 <div class="body-container">
-<div class="container">
+  <div class="container">
     <div class="row profile">
-    <div class="col-md-4">
-      <div class="profile-sidebar">
-        <center><%= image_tag("default-user.png", class: "img-responsive img-circle") %></center>
-        <div class="profile-usertitle">
-          <div class="profile-usertitle-name">
-            <%= @user.name %>
+      <div class="col-md-4">
+        <div class="profile-sidebar">
+          <center><%= image_tag("default-user.png", class: "img-responsive img-circle") %></center>
+          <div class="profile-usertitle">
+            <div class="profile-usertitle-name">
+              <%= @user.name %>
+            </div>
           </div>
-        </div>
-        <li>
-          <i class="glyphicon glyphicon-envelope"></i>
-          <%= @user.email %>
-        </li>
-        <li>
-          <i class="glyphicon glyphicon-earphone"></i>
-          <%= @user.phone_number %>
-        </li>
-        <div class="profile-userbuttons">
-          <%= link_to "#" do %>
-            <button type="button" class="btn btn-success btn-sm"><%= t ".add-friend" %></button>
-          <% end %>
-          <%= link_to "#" do %>
-            <button type="button" class="btn btn-danger btn-sm"><%= t ".message" %></button>
-          <% end %>
-          <%= link_to users_path do %>
-            <button type="button" class="btn btn-primary btn-sm"><%= t ".back" %></button>
-          <% end %>
+          <li>
+            <i class="glyphicon glyphicon-envelope"></i>
+            <%= @user.email %>
+          </li>
+          <li>
+            <i class="glyphicon glyphicon-earphone"></i>
+            <%= @user.phone_number %>
+          </li>
+          <div class="profile-userbuttons">
+            <% if @user.id != current_user.id %>
+              <% if current_user.friend?(@user) %>
+                <%= link_to t(".unfriend"), relationship_path(@user.id), method: :delete, data: {confirm: t("sure?")}, class: "btn-default btn" %>
+              <% else %>
+                <%= link_to t(".add-friend"),friend_requests_path(friend_id: @user), method: :post, class: "btn btn-success btn-sm"%>
+              <% end %>
+              <%= link_to t(".message"),"#", class: "btn btn-danger btn-sm" %>
+              <%= link_to t(".back"), users_path, class: "btn btn-primary btn-sm" %>
+            <% else %>
+              <%= link_to t(".edit"), edit_user_path, class: "btn btn-success btn-sm" %>
+            <% end %>
+          </div>
         </div>
       </div>
     </div>
   </div>
-</div>
 </div>

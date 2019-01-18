@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_01_07_040230) do
+ActiveRecord::Schema.define(version: 2019_01_16_050452) do
 
   create_table "chatroom_users", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.bigint "user_id"
@@ -28,6 +28,16 @@ ActiveRecord::Schema.define(version: 2019_01_07_040230) do
     t.datetime "updated_at", null: false
   end
 
+  create_table "friend_requests", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.bigint "user_id"
+    t.integer "friend_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["friend_id"], name: "index_friend_requests_on_friend_id"
+    t.index ["user_id", "friend_id"], name: "index_friend_requests_on_user_id_and_friend_id", unique: true
+    t.index ["user_id"], name: "index_friend_requests_on_user_id"
+  end
+
   create_table "messages", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.text "body"
     t.bigint "user_id"
@@ -43,6 +53,8 @@ ActiveRecord::Schema.define(version: 2019_01_07_040230) do
     t.bigint "user_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["friend_id"], name: "index_relationships_on_friend_id"
+    t.index ["user_id", "friend_id"], name: "index_relationships_on_user_id_and_friend_id", unique: true
     t.index ["user_id"], name: "index_relationships_on_user_id"
   end
 
@@ -58,6 +70,7 @@ ActiveRecord::Schema.define(version: 2019_01_07_040230) do
 
   add_foreign_key "chatroom_users", "chatrooms"
   add_foreign_key "chatroom_users", "users"
+  add_foreign_key "friend_requests", "users"
   add_foreign_key "messages", "chatrooms"
   add_foreign_key "messages", "users"
   add_foreign_key "relationships", "users"

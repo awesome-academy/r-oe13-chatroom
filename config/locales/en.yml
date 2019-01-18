@@ -1,14 +1,27 @@
 en:
+  friendship: "This person is your friend"
+  sure?: "Are you sure?"
   not_found: "Not found user"
   not_found_chatroom: "Not found Chatroom"
   update_succ: "Update success"
   signup_succ: "Signup success"
   chatroom_list: "Chatrooms list"
   not_owner_chatroom: "You not owner chatroom"
+  add_friend: "Added friend."
+  add_friend_err: "Error occurred when adding friend."
+  unfriend: "Successfully destroyed relationship."
+  request_sent: "Resquest sent"
+  request_error: "Error occurred when send friend request."
+  destroy_request: "Resquest destroyed"
+  destroy_request_err: "Error occurred when destroy friend request."
+  set_friend_request_error: "Can't find friend request"
+  has_error: "Has errors"
+  search: "Search"
+  search_placeholder: "Search by name, email, phone.."
   chatrooms:
     chatroom:
       show: "Show"
-      edit: "Edit"
+      edit: "Change name"
       destroy: "Destroy"
       join: "Join"
       leave: "Leave"
@@ -22,15 +35,25 @@ en:
       chatroom: "Chatroom"
       name: "Name"
       show: "Show"
-      edit: "Edit"
+      edit: "Change name"
       destroy: "Destroy"
       join: "Join"
       leave: "Leave"
     show:
       name: "Name"
       member: "Member"
-      edit: "Edit"
+      edit: "Change name"
       back: "Back"
+    edit:
+      change: "Change"
+      change_name: "Change name"
+  friend_requests:
+    index:
+      incoming: "INCOMING"
+      outgoing: "OUTGOING"
+      accept: "Accept"
+      cancel: "Cancel"
+      friendrequest: "FRIEND REQUESTS"
   layouts:
     header:
       account: "Account"
@@ -97,8 +120,14 @@ en:
       add-friend: "Add friend"
       message: "Message"
       back: "Back"
+      edit: "Edit"
+      unfriend: "Unfriend"
     index:
       users: "Users"
+    friends:
+      friends_list: "Friends list"
+    user:
+      unfriend: "Unfriend"
   controller:
     sessions:
       danger: "Invalid email/password combination"

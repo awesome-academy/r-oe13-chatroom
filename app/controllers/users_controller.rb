@@ -7,7 +7,8 @@ class UsersController < ApplicationController
   def show; end
 
   def index
-    @users = User.order_by.page(params[:page]).per(Settings.permit)
+    @q = User.ransack(params[:q])
+    @users = @q.result.page(params[:page]).per(Settings.permit)
   end
 
   def new
@@ -31,6 +32,11 @@ class UsersController < ApplicationController
     else
       render :edit
     end
+  end
+
+  def friends
+    @q = current_user.friends.ransack(params[:q])
+    @users = @q.result.page(params[:page]).per(Settings.permit)
   end
 
   private

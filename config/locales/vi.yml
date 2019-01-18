@@ -1,14 +1,27 @@
 vi:
+  friendship: "Các bạn đã là bạn bè"
+  sure?: "Bạn chắc chắn chứ?"
   not_found: "Không tìm thấy user"
   not_found_chatroom: "Không tìm thấy Phòng chát"
   update_succ: "Cập nhật thành công"
   signup_succ: "Đăng kí thành công"
   chatroom_list: "Danh sách Phòng Chat"
   not_owner_chatroom: "Bạn không phải là chủ phòng Chat này"
+  add_friend: "Thêm thành công. Các bạn đã trở thành bạn bè"
+  add_friend_err: "Có lỗi xảy ra trong quá trình thêm bạn."
+  unfriend: "Đã hủy kết bạn thành công."
+  request_sent: "Đã gửi lời mời kết bạn"
+  request_error: "Không thể gửi, xin thử lại sau"
+  destroy_request: "Đã hủy yêu cầu"
+  destroy_request_err: "Có lỗi xảy ra"
+  set_friend_request_error: "Không tìm thấy yêu cầu"
+  has_error: "Có lỗi xảy ra"
+  search: "Tìm kiếm"
+  search_placeholder: "Tìm kiếm theo tên, email, sdt"
   chatrooms:
     chatroom:
       show: "Xem"
-      edit: "Sửa"
+      edit: "Đổi tên"
       destroy: "Xóa"
       join: "Vào phòng"
       leave: "Rời phòng"
@@ -22,15 +35,25 @@ vi:
       chatroom: "Phòng Chat"
       name: "Tên phòng"
       show: "Xem"
-      edit: "Sửa"
+      edit: "Đổi tên"
       destroy: "Xóa"
       join: "Vào phòng"
       leave: "Rời phòng"
     show:
       name: "Tên phòng"
       member: "Thành viên"
-      edit: "Sửa"
+      edit: "Đổi tên"
       back: "Trở lại"
+    edit:
+      change: "Thay đổi"
+      change_name: "Đổi tên"
+  friend_requests:
+    index:
+      incoming: "ĐÃ NHẬN"
+      outgoing: "ĐÃ GƯỈ"
+      accept: "Đồng ý"
+      cancel: "Hủy"
+      friendrequest: "LƠÌ MỜI KẾT BẠN"
   layouts:
     header:
       account: "Tài khoản"
@@ -97,8 +120,14 @@ vi:
       add-friend: "Thêm bạn"
       message: "Nhắn tin"
       back: "Quay lại"
+      edit: "Chỉnh sửa"
+      unfriend: "Xóa bạn"
     index:
-      users: "Người dùng"
+      users: "Danh sách người dùng"
+    friends:
+      friends_list: "Danh sách bạn bè"
+    user:
+      unfriend: "Hủy kết bạn"
   controller:
     sessions:
       danger: "Email hoặc mật khẩu không hợp lệ"

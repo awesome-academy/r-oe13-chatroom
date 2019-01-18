@@ -7,11 +7,15 @@
         </div>
         <div class="row">
           <div class="col-xs-12">
-            <div class="input-group c-search">
-              <input type="text" class="form-control" id="contact-list-search">
-              <span class="input-group-btn">
-                <button class="btn btn-default" type="button"><span class="glyphicon glyphicon-search text-muted"></span></button>
-              </span>
+            <div class="input-group">
+              <%= search_form_for @q do |f| %>
+                <div class="col-xs-11">
+                  <%= f.text_field :name_or_email_or_phone_number_cont, class: "form-control", placeholder: t("search_placeholder") %>
+                </div>
+                <div class="col-xs-1">
+                  <%= f.submit t("search"), class: "btn btn-primary"  %>
+                </div>
+              <% end %>
             </div>
           </div>
         </div>

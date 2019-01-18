@@ -1,16 +1,8 @@
-<div class="col-md-6 bound-back">
+<% provide :button_text, t(".create") %>
+<% provide :action_path, chatrooms_path %>
+<div class="col-md-7 bound-back">
   <div class="row text-center">
     <h2 class="text-title"><%= t ".create_chatroom" %></h2>
   </div>
-  <%= form_for @chatroom, url: chatrooms_path do |f| %>
-    <%= render "shared/error_messages", object: f.object %>
-    <%= f.hidden_field :owner_id, value: current_user.id %>
-    <div class="input-group">
-      <span class="input-group-addon"><span class="glyphicon glyphicon-send"></span></span>
-      <%= f.text_field :name, class: "form-control", placeholder: t(".name") %>
-    </div>
-    <center class="btn-active-control">
-      <%= f.submit t(".create"), class: "btn-success btn-signup" %>
-    </center>
-  <% end %>
+  <%= render "form" %>
 </div>
