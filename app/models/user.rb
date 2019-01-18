@@ -3,7 +3,11 @@ class User < ApplicationRecord
   has_many :chatroom_users
   has_many :chatrooms, through: :chatroom_users, foreign_key: "owner_id"
   has_many :messages
-  has_many :relationalships
+  has_many :relationships, dependent: :destroy
+  has_many :friends, through: :relationships
+  has_many :friend_request, dependent: :destroy
+  has_many :pending_friends, through: :friend_request, source: :friend
+
   scope :order_by, -> (order_type = :desc){order(id: order_type)}
 
   validates :name, presence: true, length: {maximum: Settings.max_name}
@@ -43,4 +47,9 @@ class User < ApplicationRecord
   def current_user? user
     user == current_user
   end
+
+  def friend? other_user
+    friends.include?(other_user)
+  end
+
 end
