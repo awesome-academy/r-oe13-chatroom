@@ -14,7 +14,7 @@
   </div>
   <div class="row sideBar">
     <% current_user.chatrooms.each do |chatroom| %>
-      <%= link_to chatroom do%>
+      <%= link_to chatroom, data: {behavior: "chatroom-link", chatroom_id: chatroom.id} do%>
         <div class="row sideBar-body" id="chatroom-<%= chatroom.id %>">
           <div class="col-md-2 sideBar-icon">
             <span class="glyphicon glyphicon-envelope">
