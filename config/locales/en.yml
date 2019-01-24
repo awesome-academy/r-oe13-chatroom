@@ -26,6 +26,8 @@ en:
       join: "Join"
       leave: "Leave"
       confirm_delete: "Are you sure?"
+    form:
+      name: "Chatroom"
     member_list:
       member_head: "Member"
     new:

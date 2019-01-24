@@ -26,6 +26,8 @@ vi:
       join: "Vào phòng"
       leave: "Rời phòng"
       confirm_delete: "Bạn chắc chắn chưa"
+    form:
+      name: "Chatroom"
     member_list:
       member_head: "Thành viên"
     new:
