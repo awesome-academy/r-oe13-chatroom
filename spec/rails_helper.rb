@@ -1,6 +1,7 @@
-require "spec_helper"
+
+require 'spec_helper'
 require "support/database_cleaner.rb"
-ENV["RAILS_ENV"] ||= "test"
+ENV['RAILS_ENV'] ||= 'test'
 
 require File.expand_path("../../config/environment", __FILE__)
 abort("The Rails environment is running in production mode!") if Rails.env.production?
@@ -23,11 +24,15 @@ RSpec.configure do |config|
   # config.before(:suite) do
   #   Faker::Config.locale = 'en'
   # end
+  config.include FactoryBot::Syntax::Methods
 end
 
 Shoulda::Matchers.configure do |config|
   config.integrate do |with|
     with.test_framework :rspec
+    with.library :active_record
+    with.library :active_model
+    with.library :action_controller
     with.library :rails
   end
 end

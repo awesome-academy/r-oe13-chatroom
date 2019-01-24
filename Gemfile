@@ -8,7 +8,6 @@ gem "bootstrap-sass"
 gem "jquery-rails"
 gem "mysql2", ">= 0.4.4", "< 0.6.0"
 gem "turbolinks", "~> 5"
-gem "bootstrap-sass"
 gem "jquery-rails"
 gem "rails-i18n"
 gem "bcrypt"
@@ -43,6 +42,7 @@ group :test do
   gem "capybara", ">= 2.15"
   gem "selenium-webdriver"
   gem "chromedriver-helper"
+  gem "rails-controller-testing"
   gem "database_cleaner", "~> 1.5"
 end
 
