@@ -12,7 +12,7 @@ class ChatroomsChannel < ApplicationCable::Channel
   def send_message data
     @chatroom = Chatroom.find_by id: data["chatroom_id"]
     if @chatroom
-      message = @chatroom.messages.create(body: data[:body], user: current_user)
+      message = @chatroom.messages.create(body: data["body"], user: current_user)
       MessageRelayJob.perform_later(message)
     else
       flash[:danger] = t ".controller.messages.sen_mess_false"
